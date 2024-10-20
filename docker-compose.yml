@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  myfinances_django:
+    image: ghcr.io/treyww/myfinances:latest
+    restart: always
+    build:
+      context: ../../
+      dockerfile: infrastructure/backend/Dockerfile
+    ports:
+      - '9012:9012'
+    # volumes:
+      # - ../../:/MyFinances
+      # - myfinances_static_volume:/mnt/static/
+    # networks:
+      # - myfinances_network
+    env_file:
+      - ../../.env
+# volumes:
+  # myfinances_static_volume:
+# networks:
+  # myfinances_network:
+    # driver: bridge
