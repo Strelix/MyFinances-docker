@@ -15,7 +15,7 @@ services:
     # networks:
       # - myfinances_network
     env_file:
-      - ../../.env
+      - .env
 # volumes:
   # myfinances_static_volume:
 # networks:
